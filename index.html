@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript-贪吃蛇</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font: 20px bold;
+    }
+    .main{
+      width: 360px;
+      height: 420px;
+      background-color: #b7d4a8;
+      margin: 100px auto;
+      border: 10px solid black;
+      border-radius: 10px;
+    }
+    .stage{
+      width: 304px;
+      height: 304px;
+      border: 2px solid black;
+      margin: 0 auto;
+      margin-top: 15px;
+      position: relative;
+    }
+    .score{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+    #snake > div{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      border: #b7d4a8 1px solid;
+    }
+    #food{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #b7d4a8;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: space-between;
+      top: 20px;
+      left: 20px;
+    }
+    #food > div{
+      width: 4px;
+      height: 4px;
+      background-color: #000;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <!-- 容器 -->
+  <div class="main">
+
+    <!-- 游戏界面 -->
+    <div class="stage">
+      <!-- 蛇 -->
+      <div id="snake">
+        <div></div>
+      </div>
+      <!-- 食物 -->
+      <div id="food">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- 积分界面 -->
+    <div class="score">
+      <div>
+        SCORE: <span id="score-value">0</span>
+      </div>
+      <div>
+        LEVEL: <span id="level-value">1</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
